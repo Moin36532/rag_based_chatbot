@@ -5,7 +5,7 @@ langchain-huggingface==0.1.2
 langgraph==0.2.25
 langchain-text-splitters==0.3.0
 langchain-chroma
-
+pypdf
 # --- Graph and Workflow ---
 
 # --- Document Handling ---
@@ -16,6 +16,7 @@ PyPDF2==3.0.1  # (for PDF support if needed)
 pydantic==2.9.2
 python-dotenv==1.0.1
 streamlit==1.39.0
+
 
 
 
