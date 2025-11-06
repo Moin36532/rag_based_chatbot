@@ -12,6 +12,7 @@ from langchain_chroma.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceEmbeddings
 import os
 import tempfile
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
 # ******************************************** Utility Functions ********************************************
 def get_new_thread_id():
@@ -161,4 +162,5 @@ if user_input:
     st.session_state['messages'].append({"role": "assistant", "content": ai_response, "avatar": "🤖"})
     with st.chat_message("assistant", avatar="🤖"):
         st.text(ai_response)
+
 
