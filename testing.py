@@ -7,8 +7,8 @@ import uuid
 from chat_bot_backend import graph_chatbot
 from langchain_community.document_loaders import PyPDFLoader
 import docx
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import Chroma
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_chroma.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceEmbeddings
 import os
 import tempfile
@@ -161,3 +161,4 @@ if user_input:
     st.session_state['messages'].append({"role": "assistant", "content": ai_response, "avatar": "🤖"})
     with st.chat_message("assistant", avatar="🤖"):
         st.text(ai_response)
+
